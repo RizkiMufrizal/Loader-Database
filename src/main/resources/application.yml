@@ -3,9 +3,9 @@ spring:
   # spring datasource
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/db_loader?autoReconnect=true
+    url: jdbc:mysql://localhost:3307/db_loader
     username: root
-    password:
+    password: root
     poolName: SpringBootHikariCP
     maximumPoolSize: 5
     minimumIdle: 3
@@ -19,6 +19,8 @@ spring:
     properties:
       hibernate:
         format_sql: true
+  batch:
+    initialize-schema: always
 
 # konfigurasi log
 logging:
